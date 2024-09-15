@@ -1,6 +1,17 @@
 <nav>{{- partial "nav.html" . -}}</nav>
 
+{{ if .Params.header }}
+<div style="display: flex; justify-content: center; align-items: center">
+  <div style="display: flex; width: 20rem; gap: 2rem;">
+    <img src="yo.png" alt="">
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+
+{{ else }}
 <h1>{{ .Title }}</h1>
+{{ end }}
+
 {{ with .Description }}
   <p>{{ . }}</p>
 {{ end }}

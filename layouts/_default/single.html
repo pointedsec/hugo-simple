@@ -11,7 +11,7 @@
       </p>
     {{ end }}
   {{ end }}
-  {{ if .Params.toc }}
+  {{ if not .Params.toc }}
     <details>
       <summary>Table of Contents</summary>
       {{ .TableOfContents }}
